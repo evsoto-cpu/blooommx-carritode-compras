@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+    <head> <!-- AQUI VIENEN LOS METADATOS Y LA CONEXIÓN AL STYLE-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Valentina Soto">
+<meta name="description" content="Es un diseño de un carrito de compras
+para una Florería">
+<meta name="keywords" content="Asesoría floral, flores, ramos. bouquets, asesoría para eventos,
+ floristería, ramo personalizado, bouquets personalizados">
+
+<!--ES EL TÍTULO DE LA PÁGINA WEB-->
+ <title>Carrito de compras-BLOOOM</title>
+
+ <!--ENLAZA CON LA HOJA DE ESTILOS-->
+ <link rel="stylesheet" href="css/styles.css">
+
+ <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+
+    </head>
+<body class="paper-texture">
+
+    <!--ENCABEZADO-->
+<header class="site-header">
+    <div class="container header-inner"> 
+      <a href="#inicio" class="logo">
+        <span class="logo-icon">🌸</span>
+        BLOOOMMX
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Ramos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en BLOOOMMX.')">
+          <i data-lucide="message-circle"></i> Asesorías
+        </button>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Ramos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en BLOOOMMX.')">
+          <i data-lucide="message-circle"></i> Pedir ahora
+        </button>
+    </nav>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Detalles que hacen sonreír</p>
+          <h1>Bloom hace que cada pétalo cuente</h1>
+          <p class="lead">Sea ramo personalizado o un diseño de blooom aseguramos que será inolvidable.</p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Ver productos</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi su página y me gustaría conocer sus regalos personalizados.')">Comprar por WhatsApp</button>
+          </div>
+          <p class="trust"><i data-lucide="heart"></i> Más de 200 detalles entregados</p>
+          <p> danos tu presupuesto y te asesoraremos para crear algo especial</p>
+        </div>
+        <div class="hero-image reveal">
+          <img src="img/ramo1.1.jpg" alt="ramo mediano en tonos rosas, con hortensias frescas, lisianthus y mini rosa.">
+          <span class="tag tag-love">Hecho con cariño</span>
+          <span class="tag tag-custom">Pedidos personalizados</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Las cartas a mano y las flores en vida</p>
+          <h2>Conoce nuestros diseños</h2>
+          <p class="lead">Elige un diseño especial y hazlo único.</p>
+          <p class="description">Todos los ramos se pueden personalizar con tus flores favoritas y colores preferidos.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/ramo1.2.jpg" alt="Ramo mediano en tonos vino y verdes con hortensia, calalili, crisantemo y rosa inglesa.">
+            <div class="product-body">
+              <span class="tag">Favorito</span>
+              <h3>Ramo Rocío</h3>
+              <p class="price">$1,300 MXN</p>
+              <p class="description">Una selección única y dulce para regalar cariño en cualquier ocasión. </p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/ramo1.3.jpg" alt="Ramo grande en tonos primaverales, con hortensias, gerberas, lilies y más.">
+            <div class="product-body">
+              <span class="tag">Primaveral</span>
+              <h3>Ramo Mar</h3>
+              <p class="price">$1,300 MXN</p>
+              <p class="description">Ramo grande, con variedad de flores en tonos vibrantes, ideal para todos.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/ramo1.8.jpg" alt="Ramo grande en tonos sunset son rosa inglesa, lilies y más.">
+            <div class="product-body">
+              <span class="tag">Personalizable</span>
+              <h3>Ramo Cata</h3>
+              <p class="price">$2,000 MXN</p>
+              <p class="description">Ramo en tonos rojos y rosas, ideal para expresar amor.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/ramo1.5.jpg" alt="Ramo pequeño con anunculos y hortensia.">
+            <div class="product-body">
+              <span class="tag">Elegante</span>
+              <h3>Ramo Natalia</h3>
+              <p class="price">$1,000 MXN</p>
+              <p class="description">Ranunculos y hortensias en tonos azules y blancos.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/ramo2.3.jpg" alt="Rosas rojas y rosas inglesas en ramo.">
+            <div class="product-body">
+              <span class="tag">Para celebrar</span>
+              <h3>Ramo Rosa</h3>
+              <p class="price">$3,000 MXN</p>
+              <p class="description">Ramo clásico, grande, rosas ideal para ocasiones especiales.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/ramo2.jpg" alt="Ramo en tonos cerdes y rosas.">
+            <div class="product-body">
+              <span class="tag">Solo por que sí</span>
+              <h3>Ramo Helena</h3>
+              <p class="price">$2,400 MXN</p>
+              <p class="description">Un ramo especial, tonos verdes y rosas con flores únicas.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>¿Por qué comprarnos?</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="sparkles"></i></div>
+            <h3>Productos personalizados</h3>
+            <p>Cada detalle puede llevar tu toque especial.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="message-circle-heart"></i></div>
+            <h3>Atención rápida</h3>
+            <p>Te respondemos con cercanía y claridad.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="truck"></i></div>
+            <h3>Envíos</h3>
+            <p>Llevamos tus regalos a donde los necesites.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="mouse-pointer-click"></i></div>
+            <h3>Compra fácil</h3>
+            <p>Elige, escríbenos y listo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ================= OFERTA ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+          <span class="tag tag-light">Oferta de bienvenida</span>
+          <h2>10% de descuento en tu primer pedido</h2>
+          <p>Empieza con un detalle especial y recibe un regalito para tu primera compra.</p>
+          <button id="offer-button" type="button" class="btn butter" onclick="revealOffer()">Quiero mi descuento</button>
+          <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+            <p class="offer-reveal-title">¡Listo! Tu código de bienvenida es:</p>
+            <div class="offer-code-row">
+              <span class="offer-code">DULCE10</span>
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">Copiar código</button>
+              <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero usar mi código DULCE10 en mi primer pedido.')">Pedir por WhatsApp</button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback hidden" role="status">Código copiado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIOS ================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Historias bonitas</p>
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/blooom-logo2.png" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Mariana R.</p>
+                    <p class="occasion">Regalo para mamá</p>
+                  </div>
+                </div>
+                <p class="quote">"El ramo llegó precioso y súper bien empacado. Mi mamá quedó feliz."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/blooom-logo2.png" alt="Retrato genérico de un hombre sonriente.">
+                  <div>
+                    <p class="name">Diego M.</p>
+                    <p class="occasion">Ramo Personalizado</p>
+                  </div>
+                </div>
+                <p class="quote">"Pude personalizar el ramo y me ayudaron rapidísimo por WhatsApp."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/blooom-logo2.png" alt="Retrato genérico de una mujer joven sonriente.">
+                  <div>
+                    <p class="name">Sofía L.</p>
+                    <p class="occasion">Ramo Helena</p>
+                  </div>
+                </div>
+                <p class="quote">"Todo se sintió muy cercano, fácil y especial. Volveré a comprar."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Testimonio anterior"><i data-lucide="arrow-left"></i></button>
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+            <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+            <button aria-label="Ver testimonio 2" aria-current="false"></button>
+            <button aria-label="Ver testimonio 3" aria-current="false"></button>
+          </div>
+          <button id="testimonial-next" type="button" aria-label="Siguiente testimonio"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-panel reveal">
+        <div class="contact-text">
+          <p class="eyebrow">Estamos cerca</p>
+          <h2>Hablemos de tu próximo detalle</h2>
+          <p class="lead">Cuéntanos qué imaginas y lo convertimos en un detalle inolvidable.</p>
+          <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero platicar sobre un detalle personalizado.')">Escribir por WhatsApp</button>
+        </div>
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <ul>
+            <li><i data-lucide="instagram"></i> <a href="https://www.instagram.com/blooommx_?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==/" target="_blank" rel="noopener noreferrer">@blooommx_</a></li>
+            <li><i data-lucide="facebook"></i> <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Dulce Detalle</a></li>
+            <li><i data-lucide="mail"></i> <a href="keepbloomingmx@gmail.com">keepbloomingmx@gmail.com</a></li>
+            <li><i data-lucide="clock-3"></i> Lunes a viernes de 7:00 y sabados y domingos de 10:00 a 19:00</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+</main>
+
+ <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Blooom</p>
+      <p class="love">Todos los derechos reservados &copy; 2026 Keep Blooming</p>
+      <nav class="footer-links">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+<!-- Botón flotante de WhatsApp -->
+  <button id="whatsapp-float" type="button" class="whatsapp-float" aria-label="Escribir por WhatsApp" onclick="openWhatsApp('Hola, quiero conocer los detalles personalizados de Dulce Detalle.')">
+    <i data-lucide="message-circle"></i>
+  </button>
+  <!-- ================= MODALES DE PRODUCTO ================= -->
+  <div id="modal-caja" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caja-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/ramo1.2.jpg" alt="ramo 1">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-caja')"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-caja-title">Ramo Rocio</h2>
+        <p class="price">$1300 MXN</p>
+        <p>Una selección única y dulce para regalar cariño en cualquier ocasión.</p>
+        <h3>Personalízalo con:</h3>
+        <ul>
+          <li>Tarjeta con tu mensaje</li>
+          <li>Selección de flores</li>
+          <li>Color de listón</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir la Caja Abrazo. ¿Me ayudan a personalizarla?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para el siguiente producto-->
+  <div id="modal-vela" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-vela-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/ramo1.2.jpg" alt="Ramo 2">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-vela')"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-vela-title">Ramo Mar</h2>
+        <p class="price">$1,300 MXN</p>
+        <p>Una vela artesanal para transformar una tarde sencilla en un momento especial y lleno de calma.</p>
+        <h3>Personalízala con:</h3>
+        <ul>
+          <li>Aroma favorito</li>
+          <li>Etiqueta con nombre</li>
+          <li>Mensaje especial</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir el ramo Mar. ¿Qué flores tienen disponibles?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal del tercer producto -->
+  <div id="modal-taza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-taza-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/ramo1.8.jpg" alt="Ramo grande en tonos sunset son rosa inglesa, lilies y más.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-taza')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-taza-title">Ramo Cata</h2>
+        <p class="price">$2,000 MXN</p>
+        <p>Ramo en tonos otoñal, ideal para expresar amor.</p>
+        <h3>Personalízala con:</h3>
+        <ul>
+          <li>Nombre o frase</li>
+          <li>Color de diseño</li>
+          <li>Listón</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir el ramo Cata. Tengo una frase en mente.')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal cuarto producto-->
+  <div id="modal-jardin" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-jardin-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/ramo1.5.jpg" alt="Ramo pequeño con anunculos y hortensia.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-jardin')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-jardin-title">Ramo Natalia</h2>
+        <p class="price">$1,000 MXN</p>
+        <p>Ranunculos y hortensias en tonos azules y blancos.</p>
+        <h3>Personalízalo con:</h3>
+        <ul>
+          <li>Maceta decorada</li>
+          <li>Tarjeta especial</li>
+          <li>Selección de listón</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir el ramo Natalia. ¿Qué opciones de papel tienen?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-kit" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-kit-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/ramo2.3.jpg" alt="Rosas rojas y rosas inglesas en ramo.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-kit')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-kit-title">Ramo Rosa</h2>
+        <p class="price">$3,000 MXN</p>
+        <p>Ramo clásico, grande, rosas ideal para ocasiones especiales.</p>
+        <h3>Personalízalo con:</h3>
+        <ul>
+          <li>Mensaje</li>
+          <li>Paleta de colores</li>
+          <li>Selección de dulces</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir el ramo Rosa. ¿Me comparten opciones?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/ramo2.jpg" alt="Ramo en tonos cerdes y rosas.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">Ramo Helena</h2>
+        <p class="price">$2,400 MXN</p>
+        <p>Un ramo especial, tonos verdes y rosas con flores únicas.</p>
+        <h3>Personalízala con:</h3>
+        <ul>
+          <li>Mensaje escrito a mano</li>
+          <li>Flores a elección</li>
+          <li>Color de listón</li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir una Ramo Helena. ¿Puedo incluir un mensaje?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<script src="js/script.js"></script>
+
+ </body>   
+</html>
